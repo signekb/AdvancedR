@@ -4,3 +4,4 @@
 .Rbuildignore
 data-raw/nmr-omics/
 doc/learning.qmd
+_targets
