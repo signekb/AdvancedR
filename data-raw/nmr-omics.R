@@ -14,21 +14,21 @@ library(here)
 nmr_omics_dir <- here("data-raw/nmr-omics")
 fs::dir_create(nmr_omics_dir)
 
-download.file("https://zenodo.org/record/6597902/files/README.txt",
-              destfile = here(nmr_omics_dir, "README.txt")
+download.file(
+    "https://zenodo.org/record/6597902/files/README.txt",
+    destfile = here(nmr_omics_dir, "README.txt")
 )
 
 download.file(
     "https://zenodo.org/record/6597902/files/NMR_Integration_Data_Lipidomics.xlsx",
-    destfile = here(nmr_omics_dir, "lipidomics.xlsx"), mode = "wb"
+    destfile = here(nmr_omics_dir, "lipidomics.xlsx"),
+    mode = "wb"
 )
 
 # Wrangle dataset into tidy long format -----------------------------------
 
-lipidomics_full <- read_xlsx(
-    here(nmr_omics_dir, "lipidomics.xlsx"),
-    col_names = paste0("V", 1:40)
-)
+lipidomics_full <- read_xlsx(here(nmr_omics_dir, "lipidomics.xlsx"),
+                             col_names = paste0("V", 1:40))
 
 # There are actually two sets of data in this dataset that we need to split:
 # - Lipidomic data
@@ -61,10 +61,8 @@ subject_only <- lipidomics_full %>%
     mutate(Age = as.numeric(stringr::str_extract(Age, "\\d+"))) %>%
     rename_with(snakecase::to_snake_case)
 
-lipidomics <- full_join(
-    subject_only,
-    lipidomics_only
-) %>%
+lipidomics <- full_join(subject_only,
+                        lipidomics_only) %>%
     # Don't need anymore
     select(-name)
 
