@@ -22,3 +22,5 @@ Suggests:
     styler
 URL: https://github.com/signekb/AdvancedR
 BugReports: https://github.com/signekb/AdvancedR/issues
+Depends: 
+    tidyverse
