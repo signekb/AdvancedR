@@ -20,7 +20,6 @@ descriptive_stats <- function(data) {
 #' @param data Lipidomics data (long format)
 #'
 #' @return A plot object
-
 plot_distributions <- function(data) {
   ggplot2::ggplot(data, aes(x = value)) +
     ggplot2::geom_histogram() +
