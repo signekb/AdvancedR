@@ -1,36 +1,73 @@
 ---
-title: "Draft Quarto document"
-author: "Your Name"
+title: "Lipidomics Analysis"
+author:
+  - name: Signe Kirk Brødbæk
+    affiliations:
+      - name: Steno Diabetes Center Aarhus
 format: html
 execute:
   echo: true
-editor_options:
-  markdown:
-    wrap: 72
-    canonical: true
 ---
-
-## Header 1
 
 ```{r setup}
 targets::tar_config_set(store = here::here("_targets"))
 library(tidyverse)
 library(targets)
+library(tidymodels)
+source(here::here("R/functions.R"))
 lipidomics <- tar_read(lipidomics)
 ```
 
 ## Results
 
 ```{r}
-tar_read(df_stats_by_metabolite)
 targets::tar_read(df_stats_by_metabolite) %>%
   mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) %>%
   select(Metabolite = metabolite, `Mean SD` = MeanSD) %>%
   knitr::kable(caption = "Descriptive statistics of the metabolites.")
+
+tar_read(fig_metabolite_distribution)
+```
+
+### Figure of model estimates
+
+```{r}
+model_estimates <- tar_read(df_model_estimates)
 ```
 
 ```{r}
-tar_read(fig_metabolite_distribution)
+tar_read(fig_model_estimates)
+```
+
+## Building the model
+
+```{r}
+lipidomics_wide <- lipidomics %>%
+  column_values_to_snake_case(metabolite) %>%
+  metabolites_to_wider()
+```
+
+```{r}
+recipe_specs <- lipidomics_wide %>%
+  create_recipe_spec(metabolite_cholesterol)
+recipe_specs
+```
+
+```{r}
+model_workflow <- create_model_workflow(
+  logistic_reg() %>%
+    set_engine("glm"),
+  lipidomics_wide %>%
+    create_recipe_spec(metabolite_cholesterol)
+) %>%
+  fit(lipidomics_wide) %>%
+  tidy_model_output()
+```
+
+## Running multiple models
+
+```{r}
+model_estimates <- calculate_estimates(lipidomics)
 ```
 
 ## Old stuff
@@ -60,7 +97,7 @@ tar_read(fig_metabolite_distribution)
 # metabolite_distribution_plot <- ggplot(lipidomics, aes(x = value)) +
 #   geom_histogram() +
 #   facet_wrap(vars(metabolite), scales = "free")
-# 
+#
 # metabolite_distribution_plot
 ```
 
