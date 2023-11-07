@@ -4,3 +4,6 @@
 .Rbuildignore
 data-raw/nmr-omics/
 _targets
+
+/.quarto/
+_site
