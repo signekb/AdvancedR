@@ -18,3 +18,7 @@ editor_options:
   markdown:
     wrap: 72
     canonical: true
+
+page-footer:
+  center:
+    text: "License CC BY 4.0"
