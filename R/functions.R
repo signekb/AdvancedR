@@ -122,3 +122,19 @@ generate_model_results <- function(data) {
         parsnip::fit(data) %>%
         tidy_model_output()
 }
+
+# get original metabolite names
+#' Add original metabolite names to model results
+#'
+#' @param model_results
+#' @param data Lipidomics (long format)
+#'
+#' @return A data.frame
+add_original_metabolite_names <- function(model_results, data) {
+    data %>%
+        dplyr::mutate(term = metabolite) %>%
+        column_values_to_snake_case(term) %>%
+        dplyr::mutate(term = stringr::str_c("metabolite_", term)) %>%
+        dplyr::distinct(term, metabolite) %>%
+        dplyr::right_join(model_results, by = "term")
+}
