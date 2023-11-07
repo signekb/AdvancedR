@@ -2,10 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://signekb.github.io/AdvancedR/doc/learning.html</loc>
-    <lastmod>2023-11-07T19:28:53.547Z</lastmod>
+    <lastmod>2023-11-07T19:42:27.413Z</lastmod>
   </url>
   <url>
     <loc>https://signekb.github.io/AdvancedR/TODO.html</loc>
-    <lastmod>2023-11-07T19:28:48.495Z</lastmod>
+    <lastmod>2023-11-07T19:42:18.662Z</lastmod>
+  </url>
+  <url>
+    <loc>https://signekb.github.io/AdvancedR/LICENSE.html</loc>
+    <lastmod>2023-11-07T19:42:18.376Z</lastmod>
+  </url>
+  <url>
+    <loc>https://signekb.github.io/AdvancedR/index.html</loc>
+    <lastmod>2023-11-07T19:42:18.924Z</lastmod>
   </url>
 </urlset>
