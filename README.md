@@ -1,10 +1,3 @@
----
-editor_options:
-  markdown:
-    wrap: 72
-    canonical: true
----
-
 # AdvancedR: Lipidomics Analysis
 
 Three day course on reproducibility in research using R.
