@@ -9,6 +9,8 @@ editor_options:
 
 Three day course on reproducibility in research using R.
 
+Check out the project's [website](https://signekb.github.io/AdvancedR/)
+
 # Brief description of folder and file contents
 
 TODO: As project evolves, add brief description of what is inside the
