@@ -1,1 +1,1 @@
-Sitemap: https://signekb.github.io/AdvancedR/sitemap.xml
+Sitemap: https://github.com/signekb/AdvancedR/sitemap.xml
