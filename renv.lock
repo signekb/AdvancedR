@@ -43,14 +43,14 @@
     },
     "KernSmooth": {
       "Package": "KernSmooth",
-      "Version": "2.23-21",
+      "Version": "2.23-22",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "6314fc110e09548ba889491db6ae67fb"
+      "Hash": "2fecebc3047322fa5930f74fae5de70f"
     },
     "MASS": {
       "Package": "MASS",
@@ -69,11 +69,12 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.5-4.1",
+      "Version": "1.6-2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
+        "grDevices",
         "graphics",
         "grid",
         "lattice",
@@ -81,7 +82,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "38082d362d317745fb932e13956dccbb"
+      "Hash": "e4ea5684d8d52584681b7704132b5189"
     },
     "R6": {
       "Package": "R6",
@@ -1083,7 +1084,7 @@
     },
     "lattice": {
       "Package": "lattice",
-      "Version": "0.21-8",
+      "Version": "0.22-5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1094,7 +1095,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0b8a6d63c8770f02a8b5635f3c431e6b"
+      "Hash": "7c5e89f04e72d6611c77451f6331a091"
     },
     "lava": {
       "Package": "lava",
@@ -1129,7 +1130,7 @@
     },
     "lifecycle": {
       "Package": "lifecycle",
-      "Version": "1.0.3",
+      "Version": "1.0.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1138,7 +1139,7 @@
         "glue",
         "rlang"
       ],
-      "Hash": "001cecbeac1cff9301bdc3775ee46a86"
+      "Hash": "b8552d117e1b808b09a832f589b79035"
     },
     "listenv": {
       "Package": "listenv",
@@ -1186,7 +1187,7 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.8-42",
+      "Version": "1.9-0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1199,7 +1200,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "3460beba7ccc8946249ba35327ba902a"
+      "Hash": "086028ca0460d0c368028d3bda58f31b"
     },
     "mime": {
       "Package": "mime",
@@ -1270,7 +1271,7 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-162",
+      "Version": "3.1-163",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1280,7 +1281,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0984ce8da8da9ead8643c5cbbb60f83e"
+      "Hash": "8d1938040a05566f4f7a14af4feadd6b"
     },
     "nnet": {
       "Package": "nnet",
@@ -1714,7 +1715,7 @@
     },
     "rpart": {
       "Package": "rpart",
-      "Version": "4.1.19",
+      "Version": "4.1.21",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1723,7 +1724,7 @@
         "graphics",
         "stats"
       ],
-      "Hash": "b3c892a81783376cc2204af0f5805a80"
+      "Hash": "d5bc1a16e01e50e08581f0c362d3955d"
     },
     "rprojroot": {
       "Package": "rprojroot",
@@ -1925,7 +1926,7 @@
     },
     "survival": {
       "Package": "survival",
-      "Version": "3.5-5",
+      "Version": "3.5-7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1937,7 +1938,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "d683341b1fa2e8d817efde27d6e6d35b"
+      "Hash": "b8e943d262c3da0b0febd3e04517c197"
     },
     "sys": {
       "Package": "sys",

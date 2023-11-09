@@ -21,6 +21,7 @@ Imports:
     readxl,
     recipes,
     remotes,
+    rmarkdown,
     snakecase,
     stringr,
     tarchetypes,
